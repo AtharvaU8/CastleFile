@@ -371,6 +371,44 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FCEA74", en
   margin-bottom: 10px;
 }
 
+.credits{
+
+  display: flex;
+
+  margin: 0 auto;
+  flex-flow: column;
+  margin-top: 50px;
+  width: 90%;
+}
+.credits h1{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.credits h2{
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.credits hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid gray;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+.credits span{
+  font-size: 1.1em;
+  color: #CBCBCB;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  line-height: 1.5;
+}
+.credits a{
+  border-bottom: 1px solid #CBCBCB;
+  color: #CBCBCB;
+  font-family: "Poppins", sans-serif;
+}
 
 
 
