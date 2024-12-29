@@ -429,20 +429,31 @@ function makeBestMove(color) {
  */
 
 var undo_stack = [];
+let unstack = [];
 
 function undo() {
   var move = game.undo();
   undo_stack.push(move);
-
   // Maintain a maximum stack size
   if (undo_stack.length > STACK_SIZE) {
     undo_stack.shift();
   }
   board.position(game.fen());
 }
-
 $('#undoBtn').on('click', function () {
   if (game.history().length >= 2) {
+    
+    bm = botMoves.pop();
+    um = userMoves.pop();
+    
+    unstack.push(bm)
+    console.log("User moves:",userMoves);
+    unstack.push(um)
+    console.log("bot moves:", botMoves);
+    
+    moveCount-=2
+    console.log(moveCount);
+    
     $board.find('.' + squareClass).removeClass('highlight-white');
     $board.find('.' + squareClass).removeClass('highlight-black');
     $board.find('.' + squareClass).removeClass('highlight-hint');
@@ -456,7 +467,8 @@ $('#undoBtn').on('click', function () {
       }, 250);
     }, 250);
   } else {
-    alert('Nothing to undo.');
+    boardalert.style.display = "flex";
+    boardtext.textContent = "Nothing to undo.";
   }
 });
 
@@ -467,6 +479,20 @@ function redo() {
 
 $('#redoBtn').on('click', function () {
   if (undo_stack.length >= 2) {
+    
+    let size = unstack.length;
+    uselen = size - 1;
+    botlen = size - 2;
+    
+    userMoves.push(unstack[uselen]);
+    botMoves.push(unstack[botlen]);
+    
+    console.log("bot moves:", botMoves);
+    console.log("User moves:", userMoves);
+    
+    moveCount+=2;
+    console.log(moveCount);
+    
     // Redo twice: Player's last move, followed by opponent's last move
     redo();
     window.setTimeout(function () {
@@ -476,7 +502,8 @@ $('#redoBtn').on('click', function () {
       }, 250);
     }, 250);
   } else {
-    alert('Nothing to redo.');
+    boardalert.style.display = "flex";
+    boardtext.textContent = "Nothing to redo.";
   }
 });
 
@@ -532,7 +559,6 @@ function onDragStart(source, piece) {
 let userMoves = [];
 
 function onDrop(source, target) {
-  undo_stack
   removeGreySquares();
   
   // see if the move is legal
@@ -680,8 +706,6 @@ function downloadFile(data, filename) {
         document.body.removeChild(a);
         URL.revokeObjectURL(url); // Revoke the Blob URL after use
         console.log("File downloaded successfully:", filename);
-      	boardalert.style.display = "flex";
-        boardtext.textContent = "If the file is not downloaded, refresh and try again.";
     } catch (error) {
         console.error("Download error:", error);
         alert("Download failed. Please try again.");
@@ -743,6 +767,8 @@ const minMoves = 4;
 const maxMoves = 16;
 
 document.getElementById("encrypt").disabled = true;
+document.getElementById("undoBtn").disabled = true;
+document.getElementById("redoBtn").disabled = true;
 document.getElementById("decrypt").disabled = true;
 document.getElementById('copyMovesButton').disabled = true;
 
@@ -766,6 +792,8 @@ function resetAll() {
   // Disable buttons (if any are active)
   document.getElementById("copyMovesButton").disabled = true;
   document.getElementById("encrypt").disabled = true;
+  document.getElementById("undoBtn").disabled = true;
+  document.getElementById("redoBtn").disabled = true;
   document.getElementById("decrypt").disabled = true;
   document.getElementById('copyMovesButton').disabled = true;
 
@@ -781,13 +809,17 @@ function resetAll() {
 
 
 function onMove() {
-    moveCount++;
+    moveCount+=1;
     console.log("move:",moveCount)
     if (moveCount === minMoves) {
         // Enable encryption and decryption buttons
         document.getElementById("encrypt").disabled = false;
         document.getElementById("decrypt").disabled = false;
         document.getElementById('copyMovesButton').disabled = false;
+    }
+    if (moveCount === 1) {
+      document.getElementById("undoBtn").disabled = false;
+      document.getElementById("redoBtn").disabled = false;
     }
     
     if (moveCount >= maxMoves) {
