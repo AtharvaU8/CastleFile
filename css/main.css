@@ -277,8 +277,51 @@ input[type="file"] {
   display: none;
 }
 .action{
-  display: none;
+  margin-bottom: 10px;
 }
+.action-btn{
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  appearance: none;
+  border: 1px solid rgba(27, 31, 35, .15);
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+.act-sugg{
+  display: flex;
+  flex-direction: column;
+}
+#undoBtn{
+  background: red;
+  margin-right: 5px;
+}
+#redoBtn{
+  background: green;
+}
+.crypt:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+.crypt:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+
 .uploadfile {
   display: flex;
   justify-content: center;
@@ -309,7 +352,7 @@ input[type="file"] {
  
 }
 .suggest-crypt{
-  margin: 0.5rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
   display: flex;
   flex-wrap: wrap;
   width: 70%;
@@ -421,11 +464,10 @@ input[type="file"] {
   vertical-align: baseline;
   white-space: nowrap;
 }
-.copy:disabled, .crypt:disabled{
+.copy:disabled, .crypt:disabled, #undoBtn:disabled, #redoBtn:disabled{
   background: gray;
   color: black;
 }
-
 .div-crypt{
   width: 150px;
 }
@@ -455,15 +497,10 @@ input[type="file"] {
   touch-action: manipulation;
   white-space: nowrap;
 }
-
-
 .crypt:focus:not(:focus-visible):not(.focus-visible) {
   box-shadow: none;
   outline: none;
 }
-
-
-
 .crypt:focus {
   box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
   outline: none;
