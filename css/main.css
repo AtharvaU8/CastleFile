@@ -211,6 +211,10 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FCEA74", en
   flex-direction: column;
   text-align: center;
 }
+main{
+  display: flex;
+  flex-flow: row;
+}
 .slogan{
   font-family: "Roboto Flex", sans-serif;
   font-size: 17px;
