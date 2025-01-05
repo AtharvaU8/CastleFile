@@ -211,10 +211,6 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FCEA74", en
   flex-direction: column;
   text-align: center;
 }
-main{
-  display: flex;
-  flex-flow: row;
-}
 .slogan{
   font-family: "Roboto Flex", sans-serif;
   font-size: 17px;
@@ -261,6 +257,10 @@ main{
   font-size: 17px;
   margin: 1rem 0 2rem 0;
   font-weight: 400;
+}
+.ad-content{
+  width: 80%;
+  margin:0.5rem 0 0.5rem 0 ;
 }
 
 .chess{
