@@ -269,7 +269,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FCEA74", en
   max-height: 100%;
   width: 70%;
   height:auto;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .highlight-white {
