@@ -162,6 +162,105 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FCEA74", en
     }
 }
 
+.intro{
+  background: #2a2a2a;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 100px;
+  flex-flow: column;
+  width: 80%;
+  flex-wrap: wrap;
+  margin: 1rem 0 1rem 0;
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 2rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.intro h1{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.intro hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid gray;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+.intro p{
+  font-size: 1.1em;
+  color: #CBCBCB;
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  line-height: 1.5;
+}
+.intro .p1{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.intro .p2{
+  margin-bottom: 20px;
+}
+.intro span{
+  font-size: 1.1em;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 5px;
+}
+.intro ul{
+  list-style-position: inside; 
+}
+.intro li{
+  font-size: 1.1em;
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+  line-height: 1.5;
+  color: #CBCBCB;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.features{
+  display: flex;
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 2em;
+  margin: 0 auto;
+  flex-flow: column;
+  margin-top: 50px;
+  width: 80%;
+}
+.features h1{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.features h2{
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.features hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid gray;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+.features ul{
+  list-style-position: inside; 
+}
+.features li{
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #CBCBCB;
+  font-family: "Poppins", sans-serif;
+}
+
 
 
 #myBoard {
@@ -258,9 +357,9 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FCEA74", en
   margin: 1rem 0 2rem 0;
   font-weight: 400;
 }
+
 .ad-content{
-  width: 80%;
-  margin:0.5rem 0 0.5rem 0 ;
+
 }
 
 .chess{
