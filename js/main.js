@@ -823,9 +823,8 @@ function onMove() {
     }
     
     if (moveCount >= maxMoves) {
-        
-        
         footer.style.display = "block";
+      	features.style.display = "flex";
         homeDiv.style.marginBottom = "3rem";
         setTimeout(() => {
             makePiecesUndraggable();
@@ -840,11 +839,13 @@ function onMove() {
 
 const homeDiv = document.querySelector(".home");
 const footer = document.querySelector("footer");
+const features= document.querySelector(".features");
 
 // Enable the board for interaction
 function enableBoard() {
  // Destroy current instance
   footer.style.display = "none";
+  features.style.display = "none";
   homeDiv.style.marginBottom = "0";
   
   if (moveCount === 0) {
