@@ -543,7 +543,12 @@ function greySquare(square) {
   $square.css('background', background);
 }
 
+body = document.querySelector("body");
+
 function onDragStart(source, piece) {
+  
+  // disable scrolling 
+  body.style.overflowY = "hidden";
   // do not pick up pieces if the game is over
   if (game.game_over()) return false;
 
@@ -560,6 +565,9 @@ let userMoves = [];
 
 function onDrop(source, target) {
   removeGreySquares();
+  
+  // enables scrolling 
+  body.style.overflowY = "auto";
   
   // see if the move is legal
   var move = game.move({
@@ -823,9 +831,6 @@ function onMove() {
     }
     
     if (moveCount >= maxMoves) {
-        footer.style.display = "block";
-      	features.style.display = "flex";
-        homeDiv.style.marginBottom = "3rem";
         setTimeout(() => {
             makePiecesUndraggable();
         }, 300);
@@ -837,16 +842,9 @@ function onMove() {
     
 }
 
-const homeDiv = document.querySelector(".home");
-const footer = document.querySelector("footer");
-const features= document.querySelector(".features");
-
 // Enable the board for interaction
 function enableBoard() {
  // Destroy current instance
-  footer.style.display = "none";
-  features.style.display = "none";
-  homeDiv.style.marginBottom = "0";
   
   if (moveCount === 0) {
     
@@ -865,8 +863,6 @@ function enableBoard() {
 
 // Disable the board to prevent further moves
 function makePiecesUndraggable() {
-  footer.style.display = "block";
-  homeDiv.style.marginBottom = "3rem";
   
   board = Chessboard('myBoard', {
   position: board.fen(), // retain the current position
