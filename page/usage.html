@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript" src="https://app.termly.io/resource-blocker/58d11766-0173-45ef-95d7-01cc72cf3a20?autoBlock=on"></script>
+  <!-- Google Tag Manager -->
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MJ6B9XRW');</script>
+  <!-- End Google Tag Manager -->
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/usage.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fd38fe2beb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+        
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <title>Usage</title>
+  
+</head>
+
+<body>
+  <nav class="navbar">
+
+        <div class="max-width">
+
+            <div class="logo">
+              <img src="/img/trans-castlefile.png" alt="/img/trans-castlefile.png">
+              <a href="#">CastleFile</a>
+            </div>
+            <div class="menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+              <div class="inaclogo">
+                <img class="menu-img" src="/img/trans-castlefile.png" alt="/img/trans-castlefile.png">
+                <a class="menu-name" href="#">CastleFile</a>
+              </div>
+                <li><a href="https://castlefile.xyz/" class="menu-btn">Home</a></li>
+                <li><a href="about" class="menu-btn">About</a></li>
+                <li><a href="blog" class="menu-btn">Blog</a></li>
+                <li><a href="faq" class="menu-btn">F.A.Q</a></li>
+                <li><a href="usage" class="menu-btn">Usage</a></li>
+                <li><a href="#contact" class="menu-btn">Contact</a></li>
+            </ul>
+            
+        </div>
+  </nav>
+  
+  
+  <div class="main">
+    <h1>Usage</h1>
+    <hr />
+    <div class="intro">
+      <p>Usage Guide for CastleFile – The Chess-Based Encryption Website
+CastleFile offers a secure and innovative way to encrypt and decrypt files using your chess moves. This page will guide you step-by-step through the encryption and decryption process while providing a clear understanding of what happens in the background. Let’s dive in!</p>
+    </div>
+    
+    <div class="encrypt">
+      
+      <h1>File Encryption: </h1>
+      <img src="/img/encrypt.gif" alt="usage"></img>
+      <ol>
+        <li>Visit CastleFile.xyz.</li>
+        <li>Choose the "Encryption" option.</li>
+        <li>Upload the file you wish to encrypt (e.g., a PDF, image, or document).</li>
+        <li>Play Minimum 4 Chess Moves.</li>
+        <li>Click copy button and save the sequence of moves.</li>
+        <li>Click "Encrypt" button.</li>
+        <li>Encrypted File will be automatically Downloaded.</li>
+      </ol>
+      <h2>Encryption Process in the background:</h2>
+      
+      <h3>•  Chess Moves to Cryptographic Key:</h3>
+      <ul>
+        <li>CastleFile captures the exact sequence of your chess moves.</li>
+        <li>These moves (e.g., e2-e4, g8-f6) are converted into numerical values using pre-defined algorithms.</li>
+        <li>The numerical values are further processed to generate a unique AES-GCM encryption key.</li>
+      </ul>
+      <h3>•  AES-GCM Encryption:</h3>
+      <ul>
+        <li>The uploaded file is encrypted using the generated key.</li>
+        <li>AES-GCM not only encrypts the file but also ensures its integrity by adding authentication data.</li>
+        <li>This prevents tampering during storage or transfer.</li>
+      </ul>
+      <h3>•  File Security:</h3>
+      <ul>
+        <li>Neither the encryption key nor the file is stored on CastleFile’s servers.</li>
+        <li>Once the process is complete, the file is deleted from the server, ensuring complete privacy.</li>
+      </ul>
+      
+    </div>
+    
+    <div class="decrypt">
+
+      <h1>File Decryption: </h1>
+      <img src="/img/decrypt.gif"></img>
+      <ol>
+        <li>Visit CastleFile.xyz.</li>
+        <li>Choose the "Decryption" option.</li>
+        <li>Upload the encrypted file to decrypt.</li>
+        <li>Play the exact sequence of chess moves you played during encryption.</li>
+        <li>Click "Decrypt" button.</li>
+        <li>Decrypted File will be automatically Downloaded.</li>
+      </ol>
+      <h2>Decryption Process in the background:</h2>
+      
+      <h3>•  Chess Moves to Key Matching:</h3>
+      <ul>
+        <li>CastleFile takes the input chess moves and converts them into numerical values.</li>
+        <li>The generated values are compared with the original sequence to verify the input.</li>
+      </ul>
+      <h3>•  Key Regeneration::</h3>
+      <ul>
+        <li>Once the moves are validated, the same cryptographic key used for encryption is regenerated.</li>
+        <li>This ensures that only the correct sequence of moves can decrypt the file.</li>
+      </ul>
+      
+      <h3>•  AES-GCM Decryption:</h3>
+      <ul>
+        <li>The encrypted file is decrypted using the regenerated key.</li>
+        <li>The authentication data ensures that the file has not been tampered with during storage or transfer.</li>
+      </ul>
+      <h3>•  Secure File Handling:</h3>
+      <ul>
+        <li>As with encryption, neither the key nor the decrypted file is stored on CastleFile’s servers.</li>
+        <li>The decrypted file is downloaded and then removed from the system.</li>
+      </ul>
+      
+    </div>
+    
+    
+  </div>
+  
+  
+  <footer id="footer">
+          <div class="row primary">
+            <div class="column about">
+              <h3 class="namehead">Castle File</h3>
+              <p>
+                Castle File provides encryption and decryption of any file using chess moves in a gamified way for free. It can lock and unlock any file having any extensions such as .txt, .docx, .pdf, .jpg etc. It provides mechanism to encrypt the file with your own style of playing chess. This ensures the utmost security and privacy of your file in an unique and innovative way.
+              </p>
+            </div>
+            <div class="column links">
+
+              <h3 class="quickhead">Quick Links</h3>
+
+              <ul>
+                <li>
+                  <a href="terms_conditions.html">Terms and Conditions</a>
+                </li>
+                <li>
+                  <a href="privacy_policy.html">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="cookies.html">Cookies</a>
+                </li>
+                <li>
+                  <a href="https://atharva-portfolio.netlify.app/">Personal Portfolio</a>
+                </li>
+              </ul>
+            </div>
+            <div class="column subscribe" id="contact">
+              <h3 class="followhead">Follow Us</h3>
+              <div class="social">
+		            <a href="https://www.reddit.com/user/Suitable_Economy_463/"><i id="youtube" class="fa-brands fa-reddit"></i></a>
+		              <a href="https://www.producthunt.com/@atharvaugale8"><i id="youtube" class="fa fa-product-hunt"></i></a>
+                <a href="https://www.instagram.com/atharvaugale8/"><i id="instagram" class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/AtharvaU8/"><i id="github" class="fa-brands fa-github"></i></a>
+                <a href="https://atharva-portfolio.netlify.app/"><i id="user" class="fa fa-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="row copyright">
+            <p>Copyright &copy; 2024 Castle File | All Rights Reserved</p>
+            <a id="made" href="https://atharva-portfolio.netlify.app/">~ Made by Atharva</a>
+          </div>
+   </footer>
+  
+  
+  
+  <script src="/js/page.js"></script>
+</body>
+</html>
