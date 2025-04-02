@@ -1,21 +1,9 @@
 RewriteEngine On
 
-# Remove 'page' from URLs while serving corresponding .html files
-RewriteCond %{REQUEST_FILENAME} !-f
+# Remove 'page' from URLs and serve .html files
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^/]+)$ page/$1.html [L]
 
-# Serve .html files without trailing slash
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^/]+)/$ $1.html [L]
-
-RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html [L]
-
-# Ensure trailing slash for non-existent directories/files
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !(\[a-zA-Z0-9]{1,5}|/)$
-RewriteRule (.*)$ /$1/ [R=301,L]
-
-# Custom 404 Error Page
+# Set custom 404 error page
 ErrorDocument 404 /404.html
