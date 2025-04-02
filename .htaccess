@@ -1,11 +1,9 @@
 RewriteEngine On
 
-# Ensure the request is not for an existing file or directory
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-# Rewrite URLs like /faq to /page/faq.html
-RewriteRule ^([^/]+)$ /page/$1.html [L,NC]
+# Redirect pretty URLs to their corresponding .html files inside 'page/' folder
+RewriteCond %{REQUEST_URI} !^/page/ [NC]
+RewriteCond %{DOCUMENT_ROOT}/page/$1.html -f
+RewriteRule ^([^/]+)$ /page/$1.html [L,R=302]
 
 # Custom 404 Page
 ErrorDocument 404 /404.html
