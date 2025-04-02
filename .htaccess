@@ -5,7 +5,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Rewrite URLs like /faq to /page/faq.html
-RewriteRule ^([^/]+)/?$ page/$1.html [L]
+RewriteRule ^([^/]+)$ page/$1.html [L,NC]
 
 # Custom 404 Page
 ErrorDocument 404 /404.html
