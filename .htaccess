@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Ensure request is not for an existing file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Internally rewrite /faq to /page/faq.html
+RewriteRule ^([^/]+)/?$ /page/$1.html [L]
+
+# Custom 404 Page
+ErrorDocument 404 /404.html
