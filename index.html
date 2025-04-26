@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l: '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MJ6B9XRW');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/trans-castlefile.png" type="image/x-icon"
+    />
+    <title>
+      CastleFile: file encryption using chess
+    </title>
+    <meta name="description" content="Castle File provides online file encryption of any type of large files locally on browser using chess moves for free. online free file encryption with chess moves is now possible because of castlefile.">
+    <meta name="keywords" content="File encryption using chess, file encryption with chess moves, online file encryption, CastleFile, castlefile, Castlefile">
+    <meta name="author" content="CastleFile">
+    <link rel="canonical" href="https://castlefile.xyz/" />
+    
+    <!--Google site kit-->
+    <meta name="google-adsense-account" content="ca-pub-6987549851844747">
+    <!--search console-->
+    <meta name="google-site-verification" content="Nm6BNa4FXlZCFTkHff7n8U7PfklJn7_a68Raa4coecM"
+    />
+    
+    <!-- jQuery -->
+    <script src="../script/jquery-3.5.1.js">
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    
+    <!-- google fonts -->
+    <link href="assets/fonts/quicksand//stylesheet.css" rel="stylesheet">
+    
+    <!-- Chessboard JS -->
+    <link rel="stylesheet" href="assets/libs/chessboard-1.0.0.min.css">
+    <script defer src="assets/libs/chessboard-1.0.0.min.js">
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style/main.css">
+    <!-- Chess JS (slightly modified) -->
+    <script defer src="assets/libs/chess.js">
+    </script>
+    <!-- Chess-bot -->
+    <script defer src="assets/script/chess-bot.js">
+    </script>
+    <!-- Custom JS -->
+    <script defer src="assets/script/main.js">
+    </script>
+    <!-- jQuery -->
+    <script src="assets/script/jquery-3.5.1.js">
+    </script>
+  </head>
+  
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJ6B9XRW"
+      height="0" width="0" style="display:none;visibility:hidden">
+      </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="navbar">
+      <div class="max-width">
+        <div class="logo">
+          <img src="assets/img/trans-castlefile.png" alt="CastleFile">
+          <a href="#">
+            CastleFile
+          </a>
+        </div>
+        <div class="menu-btn" id="menu-btn">
+          <i class="fas fa-bars">
+          </i>
+        </div>
+        <ul class="menu">
+          <div class="inaclogo">
+            <img class="menu-img" src="assets/img/trans-castlefile.png" alt="CastlePass">
+            <a class="menu-name" href="#">
+              CastleFile
+            </a>
+          </div>
+          <li>
+            <a href="https://castlefile.xyz" class="menu-btn">
+              CastleFile
+            </a>
+          </li>
+          <li>
+            <a href="https://pass.castlefile.xyz" class="menu-btn">
+              CastlePass
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="menu-btn">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="blog.htnl" class="menu-btn">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="menu-btn">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="head">
+      <!-- <img src="assets/img/trans-castlefile.png" alt="castlepass" height="130px"> -->
+      <h1 class="play">
+        Chess Based File Encryption
+      </h1>
+      <!-- <span>“Encrypt Files using Chess Moves”</span> -->
+      <div class="about">
+        <p>
+          CastleFile is an innovative file encryption tool. Castlefile uses chess
+          moves as unique keys for secure, client-side file encryption of any size
+          and any type online for free. It uses the SHA-256 hashing algorithm and
+          AES encryption to ensure top-notch data protection. castlefile is a revolutionary
+          platform that brings together the art of chess and encryption technologies
+          to ensure the highest level of security for your files.
+        </p>
+      </div>
+    </header>
+    <main class="main">
+      <div class="file">
+        <!-- upload file -->
+        <div class="uploadfile">
+          <h3 class="enc-heading">
+            Upload File to Encrypt/Decrypt
+          </h3>
+          <label for="fileInput" class="inputfile">
+            <i style="display: none;" id="fileicon" class="fa-solid fa-file-arrow-up">
+            </i>
+            <i id="uploadfileicon" width="25" class="fa-solid fa-file">
+            </i>
+            <span class="filename">
+              Browse File
+            </span>
+          </label>
+          <input type="file" id="fileInput" />
+        </div>
+        <div class="advstatus">
+          <div class="advantage">
+            <h2>
+              Advantage
+            </h2>
+            <p>
+              <span id="advantageColor">
+                Neither side
+              </span>
+              has the advantage (+
+              <span id="advantageNumber">
+                0
+              </span>
+              ).
+            </p>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="-2000"
+              aria-valuemax="4000" id='advantageBar'>
+              </div>
+            </div>
+          </div>
+          <div class="status">
+            <h2>
+              Status
+            </h2>
+            <p>
+              <span id="status">
+                No check, checkmate, or draw.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- BOARD SECTION -->
+      <div class="board-wrapper">
+        <!-- Upward buttons -->
+        <div class="up">
+          <div class="up-btn">
+            <!-- copy button -->
+            <button class="copyMoves" id="copyMovesButton">
+              <span class="copy">
+                <i id="copyicon" class="fa-regular fa-clipboard">
+                </i>
+                <p class="copytext">
+                  Copy Moves
+                </p>
+              </span>
+              <span class="copied">
+                <i id="copiedicon" class="fas fa-check">
+                </i>
+                <p class="copiedtext">
+                  Copied Moves
+                </p>
+              </span>
+            </button>
+            <button class="reset" onclick="resetAll()">
+              <i class="fa fa-refresh" aria-hidden="true">
+              </i>
+              <span>
+                Reset
+              </span>
+            </button>
+          </div>
+        </div>
+        <!-- chessboard -->
+        <div class="board-cont">
+          <div id="myBoard">
+          </div>
+        </div>
+        <!-- *ignore -->
+        <div class="post" style="display: none;">
+          <div class="row justify-content-center">
+            <span id="position-count">
+              0
+            </span>
+            &nbsp positions evaluated in &nbsp
+            <span id="time">
+              0
+            </span>
+            s.
+          </div>
+          <div class="row mb-3 justify-content-center">
+            That's &nbsp
+            <span id="positions-per-s">
+              0
+            </span>
+            &nbsp positions / s.
+          </div>
+          <div class="select">
+            <div class="form-group">
+              <label for="search-depth">
+                Search Depth (Black):
+              </label>
+              <select id="search-depth">
+                <option value="3" selected>
+                  3
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="search-depth-white">
+                Search Depth (White):
+              </label>
+              <select id="search-depth-white">
+                <option value="3" selected>
+                  3
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="alert" id="boardalert">
+          <div class="flex-cont3">
+            <i id="alerticon" class="fa-solid fa-circle-exclamation">
+            </i>
+            <span id="textalert">
+            </span>
+          </div>
+          <div class="flex-cont4">
+            <i id="close" onclick="document.getElementById('boardalert').style.display='none';"
+            class="fa-solid fa-xmark">
+            </i>
+          </div>
+        </div>
+        <!-- downward buttons -->
+        <div class="bottom-btn">
+          <div class="action">
+            <button class="action-btn" id="undoBtn">
+              <i id="undoIcon" class="fa fa-undo">
+              </i>
+              Undo
+            </button>
+            <button class="action-btn" id="redoBtn">
+              <i id="redoIcon" class="fa fa-redo">
+              </i>
+              Redo
+            </button>
+          </div>
+          <div class="suggest-crypt">
+            <div class="suggest">
+              <input type="checkbox" id="showHint" name="showHint" value="showHint">
+              <label for="showHint">
+                Suggested Moves
+              </label>
+            </div>
+            <div class="gen-div">
+              <!-- generate button-->
+              <button class="crypt" id="encrypt" onclick="encryptFile()">
+                <i id="lock" width="20" height="20" class="fa-solid fa-lock">
+                </i>
+                Encrypt File
+              </button>
+              <button class="crypt" id="decrypt" onclick="decryptFile()">
+                <i id="unlock" width="20" height="20" class="fa-solid fa-unlock">
+                </i>
+                Decrypt File
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Password Strength Section -->
+    <section class="strength-section">
+      <h2 class="section-title">
+        Why should you use CastleFile?
+      </h2>
+      <div class="strength-cards">
+        <!-- Card 1: Long -->
+        <div class="strength-card">
+          <i class="fa-solid fa-key" id="strength-icon"></i>
+          <h3 class="strength-card-title">
+            Compatibility
+          </h3>
+          <p class="strength-card-desc">
+            Secure any desktop file type or size—documents, photos, or videos—without
+            restrictions, for maximum flexibility.
+          </p>
+        </div>
+        <!-- Card 2: Complex -->
+        <div class="strength-card">
+          <i class="fa fa-lock" id="strength-icon"></i>
+          <h3 class="strength-card-title">
+            Security & Privacy
+          </h3>
+          <p class="strength-card-desc">
+            CastleFile uses SHA-256 hashing and AES-GCM locally, ensuring your data
+            never leaves your device and remains under your control.
+          </p>
+        </div>
+        <!-- Card 3: Unique -->
+        <div class="strength-card">
+          <i class="fa-solid fa-fingerprint" id="strength-icon"></i>
+          <h3 class="strength-card-title">
+            Unique
+          </h3>
+          <p class="strength-card-desc">
+            Uses your favorite chess moves as dynamic, personal encryption keys, making
+            each file uniquely secured by strategy.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="faq-section">
+      <h2 class="faq-title">
+        CastleFile FAQs
+      </h2>
+      <p class="faq-subtitle">
+        Questions about Chess based File Encryption ? Answers below!
+      </p>
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>
+              Why are chess moves used instead of passwords or PINs?
+            </h3>
+            <span class="faq-icon">
+              +
+            </span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Chess moves deliver dynamic, unpredictable, personal patterns, vastly
+              increasing key complexity and eliminating vulnerabilities common to static
+              passwords or reused PINs.
+            </p>
+          </div>
+        </div>
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>
+              What file types and sizes can CastleFile handle and is it compatible with
+              mobile?
+            </h3>
+            <span class="faq-icon">
+              +
+            </span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              CastleFile supports any desktop file type or size—documents, images, videos,
+              archives—and all processing is local. It works on mobile browsers, though
+              very large files perform best on desktop.
+            </p>
+          </div>
+        </div>
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>
+              How is CastleFile secure compared to other encryption tools?
+            </h3>
+            <span class="faq-icon">
+              +
+            </span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              By using client‑side AES‑GCM with SHA‑256‑derived keys from unique chess
+              moves and storing no data or keys on servers, CastleFile delivers true
+              zero‑knowledge privacy and tamper‑proof encryption.
+            </p>
+          </div>
+        </div>
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>
+              Who is CastleFile for?
+            </h3>
+            <span class="faq-icon">
+              +
+            </span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Privacy‑conscious individuals, professionals with sensitive data, and
+              chess lovers seeking an engaging yet powerful encryption method—all with
+              no technical setup required.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>
+              Are move suggestions available for non‑chess players?
+            </h3>
+            <span class="faq-icon">
+              +
+            </span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes. Built‑in chess move suggestions guide non‑players through creating
+              strong, unique encryption keys easily, without needing prior chess expertiseYes.
+              Built‑in chess move suggestions guide non‑players through creating strong,
+              unique encryption keys easily, without needing prior chess expertise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="row primary">
+        <div class="column about">
+          <h3 class="namehead">
+            CastleFile
+          </h3>
+          <p>
+            CastleFile provides encryption and decryption of any file using chess
+            moves in a gamified way for free. It can lock and unlock any file having
+            any extensions such as .txt, .docx, .pdf, .jpg etc. It provides mechanism
+            to encrypt the file with your own style of playing chess. This ensures
+            the utmost security and privacy of your file in an unique and innovative
+            way.
+          </p>
+        </div>
+        <div class="column links">
+          <h3 class="quickhead">
+            Quick Links
+          </h3>
+          <ul>
+            <li>
+              <a href="https://chromewebstore.google.com/detail/imedbekciejflfnbpeliamodjaldecod/">
+                Chrome Web Store
+              </a>
+            </li>
+            <li>
+              <a href="terms_conditions.html">
+                Terms and Conditions
+              </a>
+            </li>
+            <li>
+              <a href="privacy_policy.html">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="cookies.html">
+                Cookies
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="column subscribe" id="contact">
+          <h3 class="followhead">
+            Follow Us
+          </h3>
+          <div class="social">
+            <a href="https://www.reddit.com/user/Suitable_Economy_463/">
+              <i id="youtube" class="fa-brands fa-reddit">
+              </i>
+            </a>
+            <a href="https://www.producthunt.com/@atharvaugale8">
+              <i id="youtube" class="fa-brands fa-product-hunt">
+              </i>
+            </a>
+            <a href="https://www.instagram.com/atharvaugale8/">
+              <i id="instagram" class="fa-brands fa-instagram">
+              </i>
+            </a>
+            <a href="https://github.com/AtharvaU8/">
+              <i id="github" class="fa-brands fa-github">
+              </i>
+            </a>
+            <a href="https://atharva-portfolio.netlify.app/">
+              <i id="user" class="fa fa-link">
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row copyright">
+        <p>
+          Copyright &copy; 2025 CastleFile | All Rights Reserved
+        </p>
+        <a id="made" href="https://atharva-portfolio.netlify.app/">
+          ~ Made by Atharva
+        </a>
+      </div>
+    </footer>
+  </body>
+
+</html>
