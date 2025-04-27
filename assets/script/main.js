@@ -216,7 +216,7 @@ function enableBoard() {
       onDrop: onDrop,
       onMouseoutSquare: onMouseoutSquare,
       onMouseoverSquare: onMouseoverSquare,
-      pieceTheme: "../src/assets/img/chesspieces/wikipedia/{piece}.png" 
+      pieceTheme: "assets/img/chesspieces/wikipedia/{piece}.png"
     });
   }
   
@@ -233,7 +233,7 @@ function makePiecesUndraggable() {
   onMouseoutSquare: onMouseoutSquare,
   onMouseoverSquare: onMouseoverSquare,
   onSnapEnd: onSnapEnd,
-  pieceTheme: "../src/assets/img/chesspieces/wikipedia/{piece}.png" 
+  pieceTheme: "assets/img/chesspieces/wikipedia/{piece}.png"
   });
 }
 
