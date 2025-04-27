@@ -21,7 +21,7 @@ var config = {
   onMouseoutSquare: onMouseoutSquare,
   onMouseoverSquare: onMouseoverSquare,
   onSnapEnd: onSnapEnd,
-  pieceTheme: "assets/img/chesspieces/wikipedia/{piece}.png" 
+  pieceTheme: "../src/assets/img/chesspieces/wikipedia/{piece}.png" 
 };
 board = Chessboard('myBoard', config);
 

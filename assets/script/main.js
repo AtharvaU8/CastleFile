@@ -155,7 +155,7 @@ function resetAll() {
   botMoves = [];
 
   // Reset UI elements
-  boardalert.style.display = "none";
+  boardlert.style.display = "none";
   textalert.textContent = "";
 
   // Disable buttons (if any are active)
@@ -216,7 +216,7 @@ function enableBoard() {
       onDrop: onDrop,
       onMouseoutSquare: onMouseoutSquare,
       onMouseoverSquare: onMouseoverSquare,
-      pieceTheme: "assets/img/chesspieces/wikipedia/{piece}.png" 
+      pieceTheme: "../src/assets/img/chesspieces/wikipedia/{piece}.png" 
     });
   }
   
@@ -233,7 +233,7 @@ function makePiecesUndraggable() {
   onMouseoutSquare: onMouseoutSquare,
   onMouseoverSquare: onMouseoverSquare,
   onSnapEnd: onSnapEnd,
-  pieceTheme: "assets/img/chesspieces/wikipedia/{piece}.png"
+  pieceTheme: "../src/assets/img/chesspieces/wikipedia/{piece}.png" 
   });
 }
 
