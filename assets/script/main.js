@@ -155,7 +155,7 @@ function resetAll() {
   botMoves = [];
 
   // Reset UI elements
-  boardlert.style.display = "none";
+  boardalert.style.display = "none";
   textalert.textContent = "";
 
   // Disable buttons (if any are active)
