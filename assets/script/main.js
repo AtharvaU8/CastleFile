@@ -133,7 +133,6 @@ document.getElementById("copyMovesButton").addEventListener("click", copyGameNot
 
 let moveCount = 0;
 const minMoves = 4;
-const maxMoves = 16;
 
 encryptBtn.disabled = true;
 undoBtn.disabled = true;
