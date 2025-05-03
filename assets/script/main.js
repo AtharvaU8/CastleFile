@@ -149,6 +149,7 @@ function resetAll() {
   $board.find('.' + squareClass).removeClass('highlight-black');
   $board.find('.' + squareClass).removeClass('highlight-hint');
   board.position(game.fen());
+  document.querySelector("#status").textContent = "No check, checkmate, or draw.";
   globalSum = 0;
   moveCount = 0;
   userMoves = [];
@@ -190,16 +191,6 @@ function onMove() {
       document.getElementById("undoBtn").disabled = false;
       document.getElementById("redoBtn").disabled = false;
     }
-    
-    if (moveCount >= maxMoves) {
-        setTimeout(() => {
-            makePiecesUndraggable();
-        }, 300);
-        
-        boardalert.style.display = "flex";
-        textalert.textContent = "Maximum moves limit reached.";
-    }
-
     
 }
 
@@ -250,12 +241,9 @@ function encryption() {
     if (file.name.endsWith('.enc.txt')) {
       decryption();
     } else {
-      if (moveCount === maxMoves) {
-        makePiecesUndraggable();
-      }
-      if(moveCount === 0) {
-        enableBoard();
-      }
+      	if(moveCount === 0) {
+        	enableBoard();
+      	}
       
     }
   }
@@ -272,9 +260,6 @@ function decryption() {
 
   if (file) {
     if (file.name.endsWith('.enc.txt')) {
-      if (moveCount === maxMoves) {
-        makePiecesUndraggable();
-      }
       if(moveCount === 0) {
         enableBoard();
       }
@@ -295,22 +280,11 @@ document.querySelector("#fileInput").onchange = function() {
 
         const isEncrypted = fileInput.name.endsWith('.enc.txt');
 
-        if (isEncrypted) {
-          if (moveCount === maxMoves) {
-            makePiecesUndraggable();
-          }
-          else{
-           decryption();
-          }
-            
+        if (isEncrypted) {    
+           decryption();        
         } 
-        else {
-          if (moveCount === maxMoves) {
-            makePiecesUndraggable();
-          }
-          else {
+        else {       
             encryption(); 
-          }
         }
     }
 };
