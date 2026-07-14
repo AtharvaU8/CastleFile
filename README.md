@@ -59,5 +59,5 @@ The encryption relies on a combination of cryptographic methods and the unique g
 
 ---
 
-[castlefile.xyz](https://castlefile.xyz) isn’t just a website—it’s a revolution in data security. We’re here to make encryption smarter, safer, and undeniably more fun. Whether you're a chess enthusiast, a tech lover, or someone who just values their privacy, CastleFile is your perfect castle against cyber threats.
+CastleFile isn’t just a website—it’s a revolution in data security. We’re here to make encryption smarter, safer, and undeniably more fun. Whether you're a chess enthusiast, a tech lover, or someone who just values their privacy, CastleFile is your perfect castle against cyber threats.
 Your moves. Your strategy. Your files. Ready to make your first move? Start now at CastleFile!
