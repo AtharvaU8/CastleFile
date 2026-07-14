@@ -7,7 +7,7 @@
 
 ---
 
-Welcome to [castlefile.xyz](https://castlefile.xyz), where your files meet the game of kings. Why settle for ordinary encryption when you can secure your data with the power of strategy and creativity? At castleFile, we blend the timeless elegance of chess with cutting-edge encryption technology, giving you a one-of-a-kind, gamified experience for locking and unlocking your files.
+Welcome to [castlefile](https://castlefile.netlify.app), where your files meet the game of kings. Why settle for ordinary encryption when you can secure your data with the power of strategy and creativity? At castleFile, we blend the timeless elegance of chess with cutting-edge encryption technology, giving you a one-of-a-kind, gamified experience for locking and unlocking your files.
 
 ## Usage
 
